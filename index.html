@@ -6,31 +6,31 @@
 <title>Outing</title>
 
 <style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    background: #000;
-    overflow: hidden;
-  }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  overflow: hidden;
+  height: 100%;
+}
 
-  .wrapper {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-  }
+.wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 
-  .video {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 100vh;
-    height: auto;
-    transform: rotate(90deg);
-    transform-origin: top left;
-  }
+.video {
+  position: absolute;
+  height: 100vw;
+  width: auto;
+  transform: rotate(90deg);
+}
 </style>
-
 </head>
 
 <body>
