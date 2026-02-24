@@ -1,46 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title></title>
+<video 
+  id="myVideo"
+  src="video.mp4" 
+  muted 
+  loop 
+  playsinline 
+  webkit-playsinline>
+</video>
 
-<style>
-html, body {
-  margin: 0;
-  padding: 0;
-  background: #000;
-  height: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
+<script>
+const video = document.getElementById("myVideo");
+
+function forcePlay() {
+  video.play();
+  document.removeEventListener("touchstart", forcePlay);
 }
 
-.container {
-  height: 100vh;
-}
-
-video {
-  height: 100vh;
-  width: auto;
-  display: block;
-  pointer-events: none; /* 禁止点击出现控制条 */
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-  <video 
-    src="video.mp4" 
-    autoplay 
-    muted 
-    loop 
-    playsinline 
-    webkit-playsinline>
-  </video>
-</div>
-
-</body>
-</html>
+video.play().catch(() => {
+  document.addEventListener("touchstart", forcePlay);
+});
+</script>
