@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Outing</title>
+
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    overflow: hidden;
+  }
+
+  .wrapper {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .video {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100vh;
+    height: auto;
+    transform: rotate(90deg);
+    transform-origin: top left;
+  }
+</style>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+  <video class="video" src="video.mp4" autoplay muted playsinline></video>
+</div>
+
+</body>
+</html>
